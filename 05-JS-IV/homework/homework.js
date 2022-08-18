@@ -36,7 +36,7 @@ function invocarMetodo (objeto, metodo) {
   // Nada necesita ser devuelto ("returned")
   // Tu código:
 
-  objeto[metodo]();
+  objeto.metodo();
 }
 
 function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
@@ -44,7 +44,7 @@ function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
 
-  return objetoMisterioso['numeroMisterioso'] * 5;
+  return objetoMisterioso.numeroMisterioso * 5;
 }
 
 function eliminarPropiedad (objeto, unaPropiedad) {
@@ -75,7 +75,7 @@ function tieneEmail (usuario) {
   // De lo contratio, devuelve "false"
   // Tu código:
 
-  return (usuario['email'])? true : false;
+  return (usuario.email)? true : false;
 }
 
 function tienePropiedad (objeto, propiedad) {
@@ -103,7 +103,7 @@ function actualizarPassword (usuario, nuevaPassword) {
 
   // NOTA: Como se como se llama la clave que hace referencia a la contraseña del usuario?
 
-  usuario['password'] = nuevaPassword;
+  usuario.password = nuevaPassword;
 
   return usuario;
 }
@@ -114,7 +114,7 @@ function agregarAmigo (usuario, nuevoAmigo) {
   // Devuelve el objeto "usuario"
   // Tu código:
 
-  usuario['amigos'].push(nuevoAmigo);
+  usuario.amigos.push(nuevoAmigo);
 
   return usuario;
 }
@@ -126,7 +126,7 @@ function pasarUsuarioAPremium (usuarios) {
   // Devuelve el array de usuarios
   // Tu código:
 
-  usuarios.forEach(value => value['esPremium'] = true);
+  usuarios.forEach(value => value.esPremium = true);
   return usuarios;
 }
 
@@ -139,7 +139,7 @@ function sumarLikesDeUsuario (usuario) {
   // Tu código:
 
   var likes = 0;
-  usuario['posts'].forEach(post => likes += post['likes']);
+  usuario.posts.forEach(post => likes += post.likes);
   
   return likes; 
 }
@@ -156,7 +156,7 @@ function agregarMetodoCalculoDescuento (producto) {
   // Tu código:
 
   producto['calcularPrecioDescuento'] = function (){
-    return producto['precio'] - (producto['precio'] * producto['porcentajeDeDescuento']);
+    return producto.precio. - (producto.precio * producto.porcentajeDeDescuento);
   }
 
   return producto;
