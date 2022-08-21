@@ -25,11 +25,12 @@ function numberOfCharacters(string) {
   var obj = {};
 
   arrayString.forEach(valor => {
-    obj[valor] = arrayString.reduce((acc, valorC) => {
-      if (valorC === valor)
-        acc += 1;
-      return acc;
-    }, 0);
+    if(!obj.hasOwnProperty(valor))
+      obj[valor] = arrayString.reduce((acc, valorC) => {
+        if (valorC === valor)
+          acc += 1;
+        return acc;
+      }, 0);
   });
 
   return obj;
